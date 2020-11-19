@@ -13,8 +13,9 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
@@ -39,6 +40,15 @@ public class LoginForm extends Application {
       grid.setVgap(10);
       grid.setHgap(10);
       grid.setPadding(new Insets(10));
+      
+      Image image=new Image("964-200x200.jpg");
+      ImageView iv=new ImageView();
+      iv.setImage(image);
+      
+         
+      
+      
+      
       Text welcomeTxt=new Text("welcome");
       welcomeTxt.setFont(Font.font("Tahoma",FontWeight.LIGHT,25));
       grid.add(welcomeTxt,0,0);
@@ -47,7 +57,7 @@ public class LoginForm extends Application {
       TextField txtUser =new TextField();
       txtUser.setPromptText("username");
       grid.add(txtUser,1,1);
-      
+     
        Label lblPassword=new Label("Password");
       grid.add(lblPassword,0,2);
       PasswordField PwBox =new PasswordField();
